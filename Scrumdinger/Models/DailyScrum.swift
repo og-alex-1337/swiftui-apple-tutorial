@@ -42,6 +42,14 @@ extension DailyScrum {
         var theme: Theme = .seafoam
     }
     
+    init(data: Data) { //add this
+        self.id = UUID()
+        self.title = data.title
+        self.attendees = data.attendees
+        self.lengthInMinutes = Int(data.lengthInMinutes)
+        self.theme = data.theme
+    }
+    
     var data: Data {
         Data(title: title,
              attendees: attendees,
