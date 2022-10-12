@@ -15,6 +15,7 @@ struct ScrumsView: View {
     let saveAction: ()->Void
     
     var body: some View {
+        
         List {
             ForEach($scrums, id: \.id) { $scrum in
                 NavigationLink(destination: DetailView(scrum: $scrum)) {
